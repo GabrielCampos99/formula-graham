@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/estilo/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://formulagraham.netlify.app/">
+          <p class="is-size-5">Formula de Graham</p>
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          
+          <a href="#sobre" class="navbar-item"> Sobre </a>
+          <a href="#quem-foi"class="navbar-item"> Quem foi Graham </a>
+          <a href="#formula" class="navbar-item"> Formula </a>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+ <!--section-->
+ <div class="container">
+    <h1 class="title">Formula de Graham Online</h1>
+    <div class="notification has-background-info-light">
+        <div class="field">
+            <label class="label ">VPA</label>
+            <div class="control">
+              <input class="input vpa" type="number" placeholder="Insira o VPA" required>
+            </div>
+            <p class="help">Insira neste campo, o valor do VPA da ação.</p>
+          </div>
+
+          <div class="field">
+            <label class="label " >LPA</label>
+            <div class="control">
+              <input class="input lpa" type="number" placeholder="Insira o LPA" required>
+            </div>
+            <p class="help">Insira neste campo, o valor do LPA da ação.</p>
+          </div>
+
+          <div class="field">
+            <label class="label ">COTA</label>
+            <div class="control">
+              <input class="input cota" type="number" placeholder="Insira o valor da cota">
+            </div>
+            <p class="help">Insira neste campo, o valor da cota da ação.</p>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button type="submit" class="button is-link calcular">CALCULAR</button>
+            </div>
+            <div class="control">
+              <button  class="button is-danger apagar">APAGAR</button>
+            </div>
+          </div>
+    </div>    
+
+   
+
+  <div class="container mt-5">
+      
+    <div class="columns ">
+        <div class="column has-background-info-light  is-align-content-center m-5">
+            <h1 class="title ">Valor Intrínseco:</h1>
+            <p class="is-size-5">R$: 
+                <span class="is-size-2 precoJusto"
+                >00,00</span>
+            </p>
+        </div>
+        <div class="column has-background-primary-light m-5 hidden" id="m-positiva">
+            <h1 class="title">Margem de segurança:</h1>
+            <p class="is-size-5"> 
+                <span class="is-size-2 m-positiva"
+                >0</span>
+                %
+            </p>
+        </div>
+        <div class="column has-background-danger-light	m-5	hidden" id="m-negativa">
+            <h1 class="title ">Margem de segurança:</h1>
+            <p class="is-size-5"> 
+                <span class="is-size-2 m-negativa"
+                >0</span>
+                %
+            </p>
+        </div>
+       
+      </div>
+  </div>
+ 
+   <section class="container mt-6">
+    <div class="block p-3" id="quem-foi">
+        <h1 class="title">Quem foi Graham?</h1>
+        <p class="is-size-5">Benjamin Graham foi um economista, professor e investidor. Nascido em Londres, Inglaterra, mudou-se para a cidade de Nova Iork junto a sua familia quando tinha 1 ano de idade.
+
+            Graduou-se na “Columbia University“ em economia e começou a sua carreira em Wall Street e eventualmente fundadando “Graham-Newman Partnership”, em parceria com “Jerry Newman” .
+            
+            Graham foi também o precursor do conhecido termo atual de Buy-and-hold (Compre e segure).</p>
+    </div>
+    
+    <div class="block p-3" id="sobre">
+        <h1 class="title">O que é a formula de Graham?</h1>
+        <p class="is-size-5">A fórmula de Graham pode ser interpretada como uma forma dos adeptos ao Value Investing obterem um valor intrínseco de um título, ela é uma simples fórmula matemática portanto não leva em consideração a realidade econômica global que contempla infinitas variáveis regentes do mercado, contudo pode servir como um norte, um valor de segurança quando se deseja adquirir um ativo. Nesse site você poderá obter o valor intrínseco de qualquer ativo que desejar, basta inserir 3 dados, o VPA (valor patrimonial por ação) que indica a relação entre patrimônio liquido de uma empresa pelo número de ações já emitidas, o LPA(lucro líquido por ação) que representa a parcela do lucro líquido pertencente a cada ação, e por último o valor atual da cota ou o preço que você tenha como alvo para a mesma.</p>
+    </div>
+
+    <div class="block p-3" id="formula">
+        <h1 class="title">A formula de Graham</h1>
+        <p class="is-size-5">A fórmula de Graham é descrita da seguinte forma:
+        </p>
+        <p class="is-size-5">VaIor Intrínseco = <strong>raiz quadrada de (22,5 x LPA x VPA)</strong></p>
+    </div>
+
+    <div class="block p-3">
+        <h1 class="title">Livros de Graham</h1>
+        <p class="is-size-5">Podemos citar duas grandes obras de Graham até hoje famosas.
+    
+        </p>
+        <p class="is-size-5">- “The Intelligent Investor”, traduzido para “O investidor inteligente”.
+    
+        </p>
+        <p class="is-size-5">- “Security Analysis”, em parceria com David Dodd, é considerada nos dias atuais como uma bíblia para os investidores.</p>
+    
+    </div>
+
+    <div class="block p-3">
+        <h1 class="title">Filosofia de investimento</h1>
+        <p class="is-size-5">Psicologia de investidor, gastar o mínimo (podemos chamar de minimalismo);
+    
+        </p>
+        <p class="is-size-5">- Buy-and-hold;
+    
+        </p>
+        <p class="is-size-5">- Analise fundamentalista;</p>
+        <p class="is-size-5">- Diversificação de ativos;</p>
+
+        <p class="is-size-5">- “Contrarian mndsets strategy” traduzindo ao pé da letra: “Mentalidade contraria”, em que basicamente vendia ativos quando o mercado estava em alta e comprava ativos quando o mercado estava em baixa.</p>
+
+    
+    </div>
+   </section>
+
+   <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Formula Graham Online</strong> por <a href="https://github.com/GabrielCampos99">Gabriel S. Campos</a>. Estudande de desenvolvimento web
+      </p>
+
+      <article class="message is-danger">
+        <div class="message-header">
+          <p class="is-size-5">IMPORTANTE</p>
+        </div>
+        <div class="message-body">
+            <p class="is-size-6">AVISO LEGAL: AS INFORMAÇÕES CONTIDAS NESTE SITE SÃO APRENDENTADAS APENAS PARA FINS DE ESTUDOS E TESTES. O CRIADOR DO SITE NÃO SE RESPONSABILIZA POR NENHUMA PERDA FINANCEIRA ORIUNDA DA DECISAO TOMADA ATRAVES DE INFORMAÇÕES CONTIDAS NESTE SITE. TODOS OS INVESTIMENTOS PODEM GERAR PREJUIZO.
+                “As informações disponibilizadas na ferramenta deste site não configuram um relatório de análise ou qualquer tipo de recomendação. Rentabilidade passada não representa garantia de resultados futuros. O dono do site, seus sócios, administradores, representantes legais e funcionários não garantem sua exatidão, atualização, precisão, adequação, integridade ou veracidade, tampouco se responsabilizam pela publicação acidental de dados incorretos.</p>
+                
+                <p class="is-size-6">NADA NO SITE É UMA RECOMENDAÇÃO DE COMPRA OU VENDA</p>
+        </div>
+        
+      </article>
+    </div>
+  </footer>
+
+
+    <!--
+        link app
+    -->
+    <script src="app.js"></script>
+  </body>
+</html>

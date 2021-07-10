@@ -1,0 +1,8 @@
+.column {
+  text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
+}
